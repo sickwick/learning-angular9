@@ -1,12 +1,16 @@
-interface SayHello {
-    sayHello: () => void
+interface User {
+    id: number
+    name: string
+    age: number
 }
 
-class User implements SayHello {
-    constructor(private name: string, protected age: number) {
-    }
 
-    sayHello() {
-        console.log(this.name + ' hello');
-    }
-}
+const users: Array<User> = [
+    {id: 1, name: 'F', age: 3},
+    {id: 2, name: 'S', age: 13}
+];
+
+const users2: User[] = [
+    {id: 1, name: 'F', age: 3},
+    {id: 2, name: 'S', age: 13}
+];
