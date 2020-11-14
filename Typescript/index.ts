@@ -1,6 +1,16 @@
-let str: string = "Hello world";
-let num: number = 5;
-let bool: boolean = false;
+function logInfo(name: string, age: number): void {
+    console.log(`Info: ${name}, ${age}`);
+}
 
-let strArray: string[] = ["H", "e", "l"];
-let numArray: Array<number> = [1, 1, 2, 3, 5, 8];
+logInfo("Tom", 25);
+
+
+function calc(a: number, b: number | string) {
+    if (typeof b === "string") {
+        b = +b
+    }
+    return a + b;
+}
+
+calc(1,2);
+calc(1,"3");
