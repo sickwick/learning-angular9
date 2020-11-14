@@ -1,16 +1,32 @@
-function logInfo(name: string, age: number): void {
-    console.log(`Info: ${name}, ${age}`);
-}
+class Server {
+    static VERSION = '1.0.3';
 
-logInfo("Tom", 25);
+    // Объявляем через конструктор
+    // public name: string;
+    // protected ip: number;
 
+    private status: string = "working";
 
-function calc(a: number, b: number | string) {
-    if (typeof b === "string") {
-        b = +b
+    // constructor(name, ip) {
+    //     this.name = name;
+    //     this.ip = ip;
+    // }
+
+    constructor(public name: string, private ip: number) {
     }
-    return a + b;
+
+    turnOn() {
+        status = "working";
+    }
+
+    turnOff() {
+        status = "offline"
+    }
+
+    getStatus(): string {
+        return this.status;
+    }
+
 }
 
-calc(1,2);
-calc(1,"3");
+const server: Server = new Server("test", 12);
