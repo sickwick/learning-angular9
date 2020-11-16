@@ -6,9 +6,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Initial';
-
-  onInput(event: any): void {
-    this.title = event.target.value;
-  }
+  public backgroundToogle = false;
 }

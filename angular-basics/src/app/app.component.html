@@ -1,5 +1,12 @@
 <h1>Hello world</h1>
 
-<!--<input type="text" [value]="title" (input)="onInput($event)">-->
-<input type="text" [(ngModel)]="title">
-<p>{{title}}</p>
+<button (click)="backgroundToogle=!backgroundToogle">Click me</button>
+
+<div [ngStyle]="{
+  width: '200px',
+  height: '200px',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  background: backgroundToogle ? 'red' : 'blue'
+}"></div>
+
