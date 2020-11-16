@@ -1,14 +1,5 @@
-<p>{{title}}</p>
-<p>{{arr}}</p>
-<p>{{obj}}</p>
-<p>{{obj.a}}</p>
-<!--<img src="{{img}}" alt="">-->
-<!--<img [src]="img" alt="">-->
-<input type="text"
-       (keyup.enter)="onInput($event)"
-       (blur)="onBlur(myInput.value)"
-       #myInput
->
-<p><strong>{{inputValue}}</strong></p>
+<h1>Hello world</h1>
 
-<button (click)="onClick()">Click</button>
+<!--<input type="text" [value]="title" (input)="onInput($event)">-->
+<input type="text" [(ngModel)]="title">
+<p>{{title}}</p>
