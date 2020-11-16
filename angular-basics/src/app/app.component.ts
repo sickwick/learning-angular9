@@ -13,11 +13,25 @@ export class AppComponent {
     b: {c: 3}
   };
   img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png';
+  inputValue = '';
 
   constructor() {
     setTimeout(() => {
       console.log('timeout');
       this.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png';
     }, 5000);
+  }
+
+  public onInput(value: KeyboardEvent): void{
+    console.log(value);
+    this.inputValue = (value.target as HTMLInputElement).value;
+  }
+
+  onClick(): void{
+    console.log('OK');
+  }
+
+  onBlur(str: string): void{
+    this.inputValue = str;
   }
 }
