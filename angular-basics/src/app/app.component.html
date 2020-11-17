@@ -1,21 +1,8 @@
 <h1>Hello world</h1>
 
-<button (click)="backgroundToogle=!backgroundToogle">Click me</button>
+<button (click)="toogle=!toogle">Click me</button>
 
-<!--<div [ngStyle]="{-->
-<!--  width: '200px',-->
-<!--  height: '200px',-->
-<!--  borderRadius: '5px',-->
-<!--  border: '1px solid #ccc',-->
-<!--  background: backgroundToogle ? 'red' : 'blue'-->
-<!--}"></div>-->
-
-<!--<p [ngClass]="{-->
-<!--  red: backgroundToogle,-->
-<!--  blue: !backgroundToogle-->
-<!--}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officia?</p>-->
-
-<p
-  [class.blue]="!backgroundToogle"
-  [class.red]="backgroundToogle"
->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, sequi.</p>
+<p *ngIf="toogle; else blueP" class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quibusdam.</p>
+<ng-template #blueP>
+  <p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quibusdam.</p>
+</ng-template>
