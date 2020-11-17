@@ -2,11 +2,20 @@
 
 <button (click)="backgroundToogle=!backgroundToogle">Click me</button>
 
-<div [ngStyle]="{
-  width: '200px',
-  height: '200px',
-  borderRadius: '5px',
-  border: '1px solid #ccc',
-  background: backgroundToogle ? 'red' : 'blue'
-}"></div>
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid #ccc',-->
+<!--  background: backgroundToogle ? 'red' : 'blue'-->
+<!--}"></div>-->
 
+<!--<p [ngClass]="{-->
+<!--  red: backgroundToogle,-->
+<!--  blue: !backgroundToogle-->
+<!--}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officia?</p>-->
+
+<p
+  [class.blue]="!backgroundToogle"
+  [class.red]="backgroundToogle"
+>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, sequi.</p>
