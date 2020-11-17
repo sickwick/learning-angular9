@@ -16,4 +16,9 @@ export class AppComponent {
     {title: 'Wont', text: 'Teach components', id: 1},
     {title: 'Next block', text: 'Directives and pipes', id: 2}
   ];
+
+  updatePosts(post: Post): void{
+    this.posts.unshift(post);
+    console.log(post);
+  }
 }
