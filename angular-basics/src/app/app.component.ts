@@ -14,11 +14,16 @@ export interface Post {
 export class AppComponent {
   posts: Post[] = [
     {title: 'Wont', text: 'Teach components', id: 1},
-    {title: 'Next block', text: 'Directives and pipes', id: 2}
+    // {title: 'Next block', text: 'Directives and pipes', id: 2}
   ];
 
-  updatePosts(post: Post): void{
+  updatePosts(post: Post): void {
     this.posts.unshift(post);
     console.log(post);
+  }
+
+  removePost(id: number): void {
+    console.log('CHECK');
+    this.posts = this.posts.filter(p => p.id !== id);
   }
 }
