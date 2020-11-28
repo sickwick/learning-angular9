@@ -2,8 +2,23 @@
   <h1>Angular Components</h1>
 
   <p appStyle="red"
+    [dStyles]="{border: '1px solid blue', borderRadius: '5px', fontWeight: 'normal'}"
   >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quod.</p>
 
   <p appStyle="blue"
+     [dStyles]="{border: '1px solid red', borderRadius: '5px', fontWeight: 'normal'}"
   >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quod.</p>
+
+  <button class="btn" (click)="isVisible = !isVisible"> Click me</button>
+<!--  <div>-->
+<!--    <p *appIfnot="!isVisible"-->
+<!--    >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt dolorum error exercitationem explicabo harum maxime molestiae, nesciunt totam voluptatem?</p>-->
+<!--  </div>-->
+
+  <ng-template [appIfnot]="!isVisible">
+    <div>
+      <p
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt dolorum error exercitationem explicabo harum maxime molestiae, nesciunt totam voluptatem?</p>
+    </div>
+  </ng-template>
 </div>
