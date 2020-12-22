@@ -15,9 +15,16 @@ export class AppComponent {
   search = '';
   searchField = 'title';
 
-  posts: Post[] = [
+  public posts: Post[] = [
     {title: 'Beer', text: 'textkjfb;ajksfb'},
     {title: 'Bread', text: 'tqqqqqqqqqq'},
     {title: 'U-key', text: 'uuuuuuuuuuu'},
   ];
+
+  public addPost(): void {
+    this.posts.unshift({
+      title: 'New post',
+      text: 'New post text'
+    });
+  }
 }
