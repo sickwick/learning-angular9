@@ -6,10 +6,14 @@
     <button class="btn" (click)="appCounterService.increase()">+</button>
     <button class="btn" (click)="appCounterService.decrease()">-</button>
   </div>
+
   <div class="card">
-    <h2>App counet {{ localCounterService.counter}}</h2>
+    <h2>App count {{ localCounterService.counter}}</h2>
+
     <button class="btn" (click)="localCounterService.increase()">+</button>
     <button class="btn" (click)="localCounterService.decrease()">-</button>
   </div>
+
+  <app-counter></app-counter>
 
 </div>
